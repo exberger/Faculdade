@@ -48,7 +48,39 @@
 
     <video controls width="600px">
         <source src="./assets/video/6561360-hd_1920_1080_30fps.mp4" type="video/mp4">
-    </video>
+    </video><br>
+    
+    <section>
+        <form action="" method="get">
+            <fieldset>
+            <legend>Contato</legend>
+        
+            <label>Nome</label><br>
+            <input type="text" name="nome"><br><br>
+
+            <label>Email</label><br>
+            <input type="email" required name="email"><br><br>
+
+            <label>Melhor data para visita</label><br><br>
+            <input type="date" name="dataVisita"><br><br>
+
+            <label>Quantidade de Propriedades para visitar</label><br><br>
+            <input type="number" name="qtdPropriedades"><br><br>
+        </fieldset><br>
+         <fieldset>
+            <legend>Quantidades de quartos que os imoveis devem ter: </legend>
+            <input type="checkbox" name="qtdQuartos1" value="qtd1a2"> 1 a 2<br>
+            <input type="checkbox" name="qtdQuartos2" value="qtd2a4"> 2 a 4<br>
+            <input type="checkbox" name="qtdQuartos3" value="qtd4a6"> 4 a 6<br>
+        </fieldset><br>
+
+            <label>Comentario</label><br>
+            <textarea rows="5" name="comentario"></textarea><br><br>
+            <button>Salvar</button>
+        
+        </form>
+    </section>
+
     <section>
         <h2>TAXAS E SERVIÇOS</h2>
         <p>Estas sao as taxas de serviços: </p>
@@ -72,6 +104,7 @@
         </tbody>
         </table>
     </section>
+
     <footer>
         <p>Site desenvolvido por Gabriel Asaaf em 08/2024.</p>
     </footer>
