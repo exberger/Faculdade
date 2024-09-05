@@ -9,3 +9,10 @@ onibus[0] = 'mercedao';
 onibus[1] = 'minhocao';
 
 console.log(onibus)
+
+
+let nomes = ["guilherme", "samuel", "davi", "joao", "manuel"];
+
+nomes.unshift("monica");
+nomes.splice(5,1);
+console.log(nomes);
