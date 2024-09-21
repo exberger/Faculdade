@@ -1,0 +1,16 @@
+Classes são modelos - ex: atributos & comportamentos
+
+classe => papagaio - atributos => tem especie / tem idade
+		   - comportamentos => canta/ come
+
+objeto: papagaio1 = obrigatorio: definir => especie/ idade
+	    		comportamentos => definidos pela classe = canta/ come
+
+classe cachorro = atributos => nomes/ idade
+		comportamentos => come/ dorme/ late
+objeto cachorro1 = "rex"/ 2anos
+ metodo(comportamento) = come/ dorme/ late
+
+rex = cachorro()
+
+Herança - sao atributos e metodos que sao herdados de uma classe para outra Classe "PAI" => "filho"

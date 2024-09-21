@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>DOM ex1</title>
+</head>
+<body><button onclick="confirma()">Preeencher dados</button>
+<script>
+
+    var nome = window.prompt("Qual é o seu nome? ");
+    var sobrenome = window.prompt("Qual é o seu sobrenome? ");
+
+    anoNas = Number.parseInt(prompt("Qual é o ano de seu nascimento?"));
+    anoAtual = Number.parseInt(window.prompt("Qual o ano atual?"));
+    idade = anoAtual - anoNas;
+
+     function confirma(){
+        let confirmacao = confirm
+        ("você deseja confirmar essas informaçoes ?")
+        if(confirmacao){
+            alert("Tudo Certo! ");
+        }else{
+            alert("Refaça! ");
+        }
+    }
+    window.alert("Seu nome é: " + nome.toUpperCase() + " " + sobrenome.toUpperCase() + ".");window.alert("você tem " + idade + " anos de idade.")
+
+
+</script>
+</body>
+</html>
+

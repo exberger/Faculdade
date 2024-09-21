@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtAh=device-width, initial-scale=1.0">
+    <title>DOM/Excp:atvpratica</title>
+</head>
+<body>
+<form id="Formulario">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome"><br>
+    <br>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade"><br>
+    <br>
+
+    <label for="cargo">Cargo:</label>
+    <select id="cargo" name="cargo">
+        <option value="Gerente">Gerente</option>
+        <option value="Desenvolvedor">Desenvolvedor</option>
+    </select><br>
+    <br>
+
+    <label for="departamento">Departamento:</label>
+    <input type="text" id="departamento" name="departamento"><br><br>
+
+    <label for="linguagem">Linguagem de Programação:</label>
+    <input type="text" id="linguagem" name="linguagem"><br>
+    <br>
+
+    <button type="button" onclick="criaFuncionario()">Salvar</button><br>
+    <br>
+
+</form>
+
+<div id="funcionarioApresentacao"></div>
+
+<script>
+class Funcionario {
+    constructor(nome, idade, cargo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cargo = cargo;
+    }
+    seApresentar() {
+        return `Olá, meu nome é ${this.nome}, minha idade é ${this.idade}, e trabalho como ${this.cargo}. Muito prazer!`;
+    }
+    trabalhar() {
+        return `${this.nome} está trabalhando!`;
+    }
+}
+
+class Gerente extends Funcionario {
+    constructor(nome, idade, cargo, departamento) {
+        super(nome, idade, cargo);
+        this.departamento = departamento;
+    }
+    gerenciar() {
+        return `${this.nome} está gerenciando o departamento de ${this.departamento}.`;
+    }
+}
+
+class Desenvolvedor extends Funcionario {
+    constructor(nome, idade, cargo, linguagem) {
+        super(nome, idade, cargo);
+        this.linguagem = linguagem;
+    }
+    programar() {
+        return `${this.nome} está programando em ${this.linguagem}.`;
+    }
+}
+
+function criaFuncionario() {
+    try {
+        const nome = document.getElementById("nome").value;
+        const idade = document.getElementById("idade").value;
+        const cargo = document.getElementById("cargo").value;
+        let funcionario;
+
+        if (!nome || !idade || !cargo) {
+            throw new Error("Preencha nome, idade e cargo para prosseguir.");
+        }
+
+        if (cargo === "Gerente") {
+            const departamento = document.getElementById("departamento").value;
+            if (!departamento) throw new Error("Preencha o departamento.");
+            funcionario = new Gerente(nome, idade, cargo, departamento);
+            Resultado(funcionario.seApresentar(), funcionario.trabalhar(), funcionario.gerenciar());
+        } else if (cargo === "Desenvolvedor") {
+            const linguagem = document.getElementById("linguagem").value;
+            if (!linguagem) throw new Error("Preencha a linguagem de programação.");
+            funcionario = new Desenvolvedor(nome, idade, cargo, linguagem);
+            Resultado(funcionario.seApresentar(), funcionario.trabalhar(), funcionario.programar());
+        }
+    } catch (erro) {
+        exibirErro(erro.message);
+    }
+}
+
+function Resultado(apresentacao, trabalho, funcao) {
+    const resultDiv = document.getElementById("funcionarioApresentacao");
+    resultDiv.innerHTML = `
+        <p>${apresentacao}</p>
+        <p>${trabalho}</p>
+        <p>${funcao}</p>`;
+}
+
+function exibirErro(mensagem) {
+    const resultDiv = document.getElementById("funcionarioApresentacao");
+    resultDiv.innerHTML = `<p style="color: red;">Erro: ${mensagem}</p>`;
+}
+</script>
+
+</body>
+</html>

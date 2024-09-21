@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ex2</title>
+</head>
+<body>
+    <h1>Usando Seletor DOM</h1>
+    <ul>
+        <li>Gabriel</li>
+        <li>Asaaf</li>
+        <li>Schoemberger</li>
+    </ul>
+    <div class="estilo">
+        div com eestilo
+    </div>
+    <div class="estilo">
+        div estilo 2
+    </div>
+    <p class="estilo"> e=Eelemento com estilo</p>
+    <p>isso é <span class="estilo"> elemento span </span> dentro de um p </p>
+
+</body>
+<script>
+    elemento0 = document.getElementsByTagName('li')[0];
+    elemento0.style.color = 'red';
+
+    const listaEstilo = document.querySelectorAll(".estilo");
+    for(i = 0; i < listaEstilo.length; i = i +1){
+        listaEstilo[i].style.backgroundColor = "blue"
+        listaEstilo[i].style.color = "white"
+        listaEstilo[i].innerText = listaEstilo[i].innerText.toUpperCase();
+    }
+</script>
+</html>

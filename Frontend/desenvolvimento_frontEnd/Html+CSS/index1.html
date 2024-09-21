@@ -9,62 +9,63 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="font-family: Arial, Helvetica, sans-serif; color:#a9a9a9;" class="fw-medium fs-0 lh-lg p-0
+">
 
-<header>
-    <nav>
-        <ul>
-            <li>
-                <a href="">casas</a>
-            </li>
-            <li>
-                <a href="">taxas</a>
-            </li>
-            <li>
-                <a href="">contato</a>
-            </li>
-        </ul>
-        <!-- exemplo de lista de descriçao:
-        <dl>
-            <dt>casas</dt>
-                <dd> descriçao...</dd>
-            <dt>contatos</dt>
-                <dd>description</dd>
-        </dl>
-        -->
-    </nav>
-    <h1>Compre aqui sua casa dos sonhos!</h1>
+<header class="container-fluid p-0 bg-info">
+    <nav class="navbar navbar-expand-lg bg-primary pb-sm-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DreamHouse</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collaps justify-content-end bg-primary container-fluid p-0" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#imovel">Casas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#taxa">Taxas</a>
+              </li>
+              <li class="">
+                <a class="nav-link" href="#contato" role="button">
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <h1 class="p-3 fs-1 lh-lg text-light text-center">Compre aqui sua casa dos sonhos!</h1>
 </header>
 
-<section id="imovel">
-    <h2>Conheça nossos imoveis</h2>
+<section class="p-2" id="imovel">
+    <h2 class="fs-3 text-black text-uppercase text-center fw-bolder">Conheça nossos imoveis</h2>
     <p>
         Temos imoveis para todo tipo de pessoas! Veja alguns...
     </p>
-    <div class="figuras">
+    <div class="figuras container-fluid">
         <figure class="col text-center">
-            <img src="./assets/img/ameland-5651866_640.jpg" alt="Casa na Praia">
+            <img class="container-fluid" src="./assets/img/ameland-5651866_640.jpg" alt="Casa na Praia">
             <figcaption>Linda Casa Na Praia</figcaption>
         </figure>
         <figure class="
         col text-center
         ">
-            <img src="./assets/img/dinant-2220459_640.jpg" alt="Apartamentos coloridos em beira de lago">
+            <img class="container-fluid" src="./assets/img/dinant-2220459_640.jpg" alt="Apartamentos coloridos em beira de lago">
             <figcaption>Apartamentos na Beira do Lago mais Bonito da Regiao</figcaption>
         </figure>
         <figure class="col text-center">
-            <img src="./assets/img/village-279013_640.jpg" alt="Casas em rochas beira-mar">
+            <img class="container-fluid
+            " src="./assets/img/village-279013_640.jpg" alt="Casas em rochas beira-mar">
             <figcaption>Casas Beira Mar</figcaption>
         </figure>
     </div>
-    <div class="videos">
-        <video controls width="600px">
-        <source src="./assets/video/6561360-hd_1920_1080_30fps.mp4" type="video/mp4">
-        </video><br>
-    </div>
 </section>
 
-<section>
+<section class="container-fluid" id="contato">
+    <h2 class="text-black">Formulario de Contato</h2>
+    <p>Deixe aqui suas informaçoes para contato.</p>
     <form action="" method="get">
         <fieldset>
         <legend>Contato</legend>
@@ -95,32 +96,32 @@
     </form>
 </section>
 
-<section>
-    <h2>TAXAS E SERVIÇOS</h2>
+<section class="p-3" id="taxa">
+    <h2 class="text-black">TAXAS E SERVIÇOS</h2>
     <p>Estas sao as taxas de serviços: </p>
-    <table>
+    <table class="container-fluid">
         <caption>Taxas e Serviços</caption>
-    <thead>
+    <thead class="bg-primary text-light">
         <tr>
             <th>Serviços</td>
             <th>Valores</td>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td>Reserva</td>
+    <tbody class="text-dark">
+        <tr class="bg-body-secondary">
+            <td class="p-1">Reserva</td>
             <td>R$ 1000,00</td>
         </tr>
-        <tr>
-            <td>Calçao</td>
+        <tr class="bg-body-tertiary bg-p">
+            <td class="p-1">Calçao</td>
             <td>R$ 3000,00</td>
         </tr>
     </tbody>
     </table>
 </section>
 
-<footer>
-    <p>Site desenvolvido por Gabriel Asaaf em 08/2024.</p>
+<footer class="p-2">
+    <p>Site desenvolvido por Gabriel Asaaf em 09/2024.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

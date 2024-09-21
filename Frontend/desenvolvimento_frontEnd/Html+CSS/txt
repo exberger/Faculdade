@@ -2,4 +2,8 @@
  - Adicionando imagens e videos a pagina Html: (<figure> -> <img>, <video>...)
  - Organizando conteudo em listas: (<ul>, <ol>, <dl>...)
  - Tabela em HTML: (tabela em htm tambem tem uma estrutura semantica <table>, <caption>(descriçao da tabela), <theader>, <tbody>, <tfoot>, <th>(titulos em negrito e centralizado), <tr>(linha), <td>(coluna)).
-- Formularios em HTML: <for>
+- Formularios em HTML: <form>
+- sintaxe de CSS: Seleetor de elemento{propriedade: valorAserAlterado;} ex: h1{
+    color: red;
+    font-size: 5px;
+}

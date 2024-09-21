@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>DOM ex 3</title>
+</head>
+<body>
+    <ul id="lista">
+
+    </ul>
+</body>
+<script>
+    var elemento = document.createElement("div");
+    elemento.innerText = "Incluindo Texto na DIV";
+    elemento.style.backgroundColor = "lightgreen";
+    document.body.append(elemento);
+
+    var lista = document.getElementById('lista');
+    var li = document.createElement("li");
+    li.textContent = "quem somos";
+    lista.appendChild(li);
+</script>
+</html>
